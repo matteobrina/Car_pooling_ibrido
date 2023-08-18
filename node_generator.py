@@ -1,5 +1,6 @@
 import nodo
 from random import randint
+import utili as ut
 def generator():
     x= randint(1, 1000)
     y= randint(1, 1000)
@@ -12,12 +13,11 @@ def generator():
     return n
 
 def genera_lista():
-    uni = nodo.Nodo(540, 320, 0, 1)
-    lista = [uni]
-    for i in range(2, 51):
+    lista = []
+    for i in range(1, 51):
         n=generator()
         n.set_id(i)
-        while(n in lista):
+        while(ut.is_present(lista, n)):
             n=generator()
             n.set_id(i)
         lista.append(n)

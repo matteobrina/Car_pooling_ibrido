@@ -2,11 +2,11 @@ import nodo
 import math
 
 def distanza(nodo1, nodo2):
-    return math.sqrt(pow(nodo2.x-nodo1.x, 2)+ pow(nodo2.y-nodo1.y, 2))
+    return math.sqrt(pow(nodo2.get_x()-nodo1.get_x(), 2)+ pow(nodo2.get_y()-nodo1.get_y(), 2))
 
 def rimuovi(lista, nodo):
     for el in lista:
-        if nodo.i == el.i:
+        if nodo.get_id() == el.get_id():
             lista.remove(el)
 
 def kmtot(lista):
@@ -14,4 +14,10 @@ def kmtot(lista):
     for el in lista:
         tot = tot+ el.get_km()
     return tot
+
+def is_present(lista, nodo):
+    for el in lista:
+        if((el.get_x() == nodo.get_x()) and (el.get_y()==nodo.get_y())):
+            return True
+    return False
 

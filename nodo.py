@@ -31,19 +31,16 @@ class Nodo:
     def set_id(self, i):
         self.i=i
 
-    def compare_to(self, node):
-        if (self.c < node.c):
-            return -1
-        elif (self.c > node.c):
-            return 1
-        else:
-            return 0
+        
+    def __lt__(self, other):
+        return self.c < other.c
+    
+    def __gt__(self, other):
+        return self.c > other.c
+    
         
     def __eq__(self, other):
-        if ((self.x == other.x) and (self.y == other.y)):
-            return True
-        else:
-            return False 
+        return self.c == other.c
 
 
     
