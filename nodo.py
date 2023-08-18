@@ -31,16 +31,10 @@ class Nodo:
     def set_id(self, i):
         self.i=i
 
-        
-    def __lt__(self, other):
-        return self.c < other.c
-    
-    def __gt__(self, other):
-        return self.c > other.c
     
         
     def __eq__(self, other):
-        return self.c == other.c
+        return self.i == other.i
 
 
     

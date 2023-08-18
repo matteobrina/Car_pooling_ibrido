@@ -10,6 +10,8 @@ class Cluster_set:
         while(len(lista_nodi)!=0):
             temp_cluster=self.create_cluster(lista_nodi, unife, lista_fermate)
             set.append(temp_cluster)
+            for i in range(0, len(temp_cluster.get_nodi())):
+                ut.rimuovi(lista_nodi, temp_cluster.get_nodi()[i])
         self.cluster_set=set
         self.number_of_clusters=len(set)
 
@@ -45,8 +47,8 @@ class Cluster_set:
                                 if((fermata_collegata.get_l()==fermata.get_l()) and (c<4)):
                                     for nodo_p in lista_nodi:
                                         if ((nodo_p.get_c()==1) and (ut.distanza(nodo_p, fermata_collegata)<=10)and (c<4)):
-                                            nodo_p.set_x(fermata_collegata.get_x())
-                                            nodo_p.set_y(fermata_collegata.get_y())
+                                            nodo_p.set_x(fermata.get_x())
+                                            nodo_p.set_y(fermata.get_y())
                                             cluster.aggiungi_nodo(nodo_p)
                                             ut.rimuovi(lista_nodi, nodo_p)
                                             c=c+1 
@@ -57,3 +59,6 @@ class Cluster_set:
             cluster.aggiungi_nodo(starter_node)
         
         return cluster
+    
+    def get_cluster_set(self):
+        return self.cluster_set

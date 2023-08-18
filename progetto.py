@@ -10,6 +10,8 @@ import cluster_first as cf
 
 
 lista= ng.genera_lista()
+for el in lista:
+    print(el)
 
 unife = nodo.Nodo(321, 765)
 
@@ -18,9 +20,12 @@ with open('nodi.txt', 'w') as f:
         f.write(str(el)+ '\n')
 
 listaf = fg.genera_lista()
+for el in listaf:
+    print(el)
+
 
 cluster= cf.Cluster_set(lista, unife, listaf)
-for el in cluster:
+for el in cluster.get_cluster_set():
     print(el)
 
 

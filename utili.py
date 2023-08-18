@@ -6,8 +6,8 @@ def distanza(nodo1, nodo2):
 
 def rimuovi(lista, nodo):
     for el in lista:
-        if nodo.get_id() == el.get_id():
-            lista.remove(el)
+        if (nodo.get_id() == el.get_id()):
+            lista.remove(nodo)
 
 def kmtot(lista):
     tot = 0
