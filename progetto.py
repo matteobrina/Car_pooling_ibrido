@@ -7,6 +7,7 @@ import route as rt
 import fermata as fe
 import fermata_generator as fg
 import cluster_first as cf
+import cheapest_insertion as ci
 
 
 lista= ng.genera_lista()
@@ -27,6 +28,11 @@ for el in listaf:
 cluster= cf.Cluster_set(lista, unife, listaf)
 for el in cluster.get_cluster_set():
     print(el)
+    print(ci.routing(el))
+
+
+
+
 
 
 

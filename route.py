@@ -9,7 +9,7 @@ class Route(cl.Cluster):
     def get_km(self):
         return self.km
     
-    def set_km(self, km):
+    def set_km2(self, km):
         self.km=km
 
     def set_km(self):
@@ -17,13 +17,13 @@ class Route(cl.Cluster):
         lista = self.get_nodi()
         for i in range(0, len(lista)-1):
             distanza = distanza + ut.distanza(self.get_nodi()[i], self.get_nodi()[i+1])
-
         self.km=distanza
 
-    def compare_to(self, other):
-        if self.km < other.km:
-            return -1
-        elif self.km > other.km:
-            return 1
-        else:
-            return 0
+    def __lt__(self, other):
+        return self.km < other.km
+    
+    def __gt__(self, other):
+        return self.km > other.km
+    
+    def __eq__(self, other):
+        return self.km==other.km

@@ -1,5 +1,6 @@
 import nodo
 import math
+import route as rt
 
 def distanza(nodo1, nodo2):
     return math.sqrt(pow(nodo2.get_x()-nodo1.get_x(), 2)+ pow(nodo2.get_y()-nodo1.get_y(), 2))
@@ -20,4 +21,12 @@ def is_present(lista, nodo):
         if((el.get_x() == nodo.get_x()) and (el.get_y()==nodo.get_y())):
             return True
     return False
+
+def gen_route(route, nodo, indice):
+    lista=route.get_nodi()
+    lista2=lista.copy()
+    lista2.insert(indice, nodo)
+    route2= rt.Route()
+    route2.set_nodi(lista2)
+    return route2
 

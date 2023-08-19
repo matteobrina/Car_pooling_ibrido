@@ -46,7 +46,7 @@ class Cluster_set:
                             for fermata_collegata in lista_fermate:
                                 if((fermata_collegata.get_l()==fermata.get_l()) and (c<4)):
                                     for nodo_p in lista_nodi:
-                                        if ((nodo_p.get_c()==1) and (ut.distanza(nodo_p, fermata_collegata)<=10)and (c<4)):
+                                        if ((nodo_p.get_c()==1) and (ut.distanza(nodo_p, fermata_collegata)<=10)and (c<4) and (ut.distanza(fermata, fermata_collegata)<ut.distanza(nodo_p, unife))):
                                             nodo_p.set_x(fermata.get_x())
                                             nodo_p.set_y(fermata.get_y())
                                             cluster.aggiungi_nodo(nodo_p)
