@@ -4,7 +4,12 @@ import utili as ut
 class Route(cl.Cluster):
 
     def __str__(self):
-        return "Route:{" + "km: " + str(self.km) + '}' 
+        stringa = "Route:{" + "km: " + str(self.km)
+        for el in self.get_nodi():
+            stringa = stringa + '\n' +str(el)
+        stringa = stringa + '}'
+        return stringa
+         
     
     def get_km(self):
         return self.km
