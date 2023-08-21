@@ -23,3 +23,6 @@ class Cluster:
     def aggiungi_nodo(self, nodo):
         self.nodi.append(nodo)
 
+    def rimuovi_nodo(self, nodo):
+        self.nodi.remove(nodo)
+
