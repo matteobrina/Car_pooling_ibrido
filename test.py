@@ -26,6 +26,6 @@ for el in cluster.get_cluster_set():
     print(ci.routing(el))
 
 for el in cluster.get_cluster_set():
-    for el2 in ls.due_opt(ci.routing(el)):
+    for el2 in ls.chain_relocation(ci.routing(el)):
         print(el2)
 

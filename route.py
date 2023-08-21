@@ -4,6 +4,10 @@ import copy
 
 class Route(cl.Cluster):
 
+    def __init__(self):
+        super().__init__()
+        self.km=0
+
     def __str__(self):
         stringa = "Route:{" + "km: " + str(self.km)
         for el in self.get_nodi():
