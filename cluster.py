@@ -1,4 +1,4 @@
-import nodo
+import copy
 
 class Cluster:
 
@@ -15,7 +15,7 @@ class Cluster:
         return stringa
     
     def get_nodi(self):
-        return self.nodi
+        return copy.deepcopy(self.nodi)
     
     def set_nodi(self, nodi):
         self.nodi=nodi

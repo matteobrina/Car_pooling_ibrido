@@ -2,6 +2,7 @@ from operator import attrgetter
 import cluster as cl
 import nodo as nd
 import utili as ut
+import copy
 class Cluster_set:
     def __init__(self, lista_nodi, unife, lista_fermate):
         set = []
@@ -61,4 +62,4 @@ class Cluster_set:
         return cluster
     
     def get_cluster_set(self):
-        return self.cluster_set
+        return copy.deepcopy(self.cluster_set)

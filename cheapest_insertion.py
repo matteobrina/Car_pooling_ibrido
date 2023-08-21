@@ -13,13 +13,13 @@ def routing(cluster):
         for i in range(0, len(cluster.get_nodi())):
             if (cluster.get_nodi()[i].get_c()==5):
                 route.aggiungi_nodo(cluster.get_nodi()[i])
-                ut.rimuovi(cluster.get_nodi(), cluster.get_nodi()[i])
+                ut.rimuovi(cluster.nodi, cluster.get_nodi()[i])
                 break
 
         for i in range(0, len(cluster.get_nodi())):
             if (cluster.get_nodi()[i].get_c()==0):
                 route.aggiungi_nodo(cluster.get_nodi()[i])
-                ut.rimuovi(cluster.get_nodi(), cluster.get_nodi()[i])
+                ut.rimuovi(cluster.nodi, cluster.get_nodi()[i])
                 break
 
         while(len(cluster.get_nodi())!=0):
@@ -40,7 +40,7 @@ def routing(cluster):
             route.set_km2(routes[id].get_km())
             for i in range(0, len(cluster.get_nodi())):
                 if cluster.get_nodi()[i] in route.get_nodi():
-                    ut.rimuovi(cluster.get_nodi(), cluster.get_nodi()[i])
+                    ut.rimuovi(cluster.nodi, cluster.get_nodi()[i])
                     break
     return route
 

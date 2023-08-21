@@ -1,3 +1,4 @@
+import copy
 class Fermata:
 
     def __init__(self, x, y, l):
@@ -9,11 +10,11 @@ class Fermata:
         return("Fermata{" + "X=" + str(self.x) + " Y=" + str(self.y) +" Linea=" +str(self.l) +"}")
 
     def get_x(self):
-        return self.x
+        return copy.deepcopy(self.x)
     def get_y(self):
-        return self.y
+        return copy.deepcopy(self.y)
     def get_l(self):
-        return self.l
+        return copy.deepcopy(self.l)
     
     def set_x(self, x):
         self.x = x

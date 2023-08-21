@@ -1,5 +1,6 @@
 import cluster as cl
 import utili as ut
+import copy
 
 class Route(cl.Cluster):
 
@@ -12,7 +13,7 @@ class Route(cl.Cluster):
          
     
     def get_km(self):
-        return self.km
+        return copy.deepcopy(self.km)
     
     def set_km2(self, km):
         self.km=km

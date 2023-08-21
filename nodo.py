@@ -1,3 +1,4 @@
+import copy
 class Nodo:
     
 
@@ -11,13 +12,13 @@ class Nodo:
         return("Node{" + "X=" + str(self.x) + " Y=" + str(self.y) + " C=" +str(self.c) + " ID=" +str(self.i) +"}")
 
     def get_x(self):
-        return self.x
+        return copy.deepcopy(self.x)
     def get_y(self):
-        return self.y
+        return copy.deepcopy(self.y)
     def get_c(self):
-        return self.c
+        return copy.deepcopy(self.c)
     def get_id(self):
-        return self.i
+        return copy.deepcopy(self.i)
     
     def set_x(self, x):
         self.x = x

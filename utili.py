@@ -23,10 +23,9 @@ def is_present(lista, nodo):
     return False
 
 def gen_route(route, nodo, indice):
+    route2 = rt.Route()
     lista=route.get_nodi()
-    lista2=lista.copy()
-    lista2.insert(indice, nodo)
-    route2= rt.Route()
-    route2.set_nodi(lista2)
+    lista.insert(indice, nodo)
+    route2.set_nodi(lista)
     return route2
 
