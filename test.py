@@ -25,7 +25,24 @@ for el in cluster.get_cluster_set():
     print(el)
     print(ci.routing(el))
 
-for el in cluster.get_cluster_set():
-    for el2 in ls.chain_relocation(ci.routing(el)):
-        print(el2)
+"""print("\n INIZIO COPPIE")
+for i in range(0, len(cluster.get_cluster_set())):
+    print('\n')
+    print('\n')
+    for k in range(i+1, len(cluster.get_cluster_set())):
+        if(k!=i):
+            print('\n')
+            for el in ls.string_exchange(ci.routing(cluster.get_cluster_set()[i]), ci.routing(cluster.get_cluster_set()[k])):
+                print("ELEMENTO1"+str(el[0]) + "\n ELEMENTO2"+ str(el[1]))"""
+
+
+print("\n INIZIO COPPIE")
+for i in range(0, len(cluster.get_cluster_set())):
+    print('\n')
+    print('\n')
+    for k in range(i+1, len(cluster.get_cluster_set())):
+        if(k!=i):
+            print('\n')
+            for el in ls.string_relocation(ci.routing(cluster.get_cluster_set()[i]), ci.routing(cluster.get_cluster_set()[k])):
+                print("ELEMENTO1"+str(el[0]) + "\n ELEMENTO2"+ str(el[1]))
 
