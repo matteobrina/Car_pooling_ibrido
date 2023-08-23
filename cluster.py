@@ -17,6 +17,9 @@ class Cluster:
     def get_nodi(self):
         return copy.deepcopy(self.nodi)
     
+    def get_nodi_rif(self):
+        return self.nodi
+    
     def set_nodi(self, nodi):
         self.nodi=nodi
 
