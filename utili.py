@@ -29,3 +29,8 @@ def gen_route(route, nodo, indice):
     route2.set_nodi(lista)
     return route2
 
+def copy_routes(routes):
+    routes2=[]
+    routes2.extend(routes)
+    return routes2
+
