@@ -43,7 +43,7 @@ routes2=copy.deepcopy(lista_di_routes)
 
 solo_routes = []
 for el in routes2:
-    if len(el.get_nodi())==2:
+    if len(el.get_nodi())==2  and el.get_nodi()[0].get_c()==1:
         solo_routes.append(el)
 
 routes_merge1=mer.merge_single_nodes(routes2, solo_routes)
