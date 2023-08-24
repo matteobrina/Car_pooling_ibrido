@@ -36,8 +36,8 @@ def merge_incomplete_routes(current_solution):
     not_consider=[]
 
     while len(incomplete_route_list) >1:
-        for i in range(1, len(incomplete_route_list)-1):
-            if (len(incomplete_route_list[0].get_nodi()) + len(incomplete_route_list[i].get_nodi())) <=6:
+        for i in range(1, len(incomplete_route_list)):
+            if (len(incomplete_route_list[0].get_nodi()) + len(incomplete_route_list[i].get_nodi())) <=7:
                 possibili_soluzioni.append(merging_incomplete_routes(new_current_solution, incomplete_route_list[0], incomplete_route_list[i]))
 
         index=0
@@ -132,7 +132,7 @@ def merging_single_node(current_solution, solo, incomplete):
 def make_route(autista, r1, r2):
     route = rt.Route()
     route.aggiungi_nodo(autista)
-    if ((len(r1.get_nodi())-1) + len(r2.get_nodi())) <=5:
+    if ((len(r1.get_nodi())-1) + len(r2.get_nodi())) <=6:
         for i in range(0, len(r1.get_nodi())-1):
             if r1.get_nodi()[i].get_id() != autista.get_id():
                 route.aggiungi_nodo(r1.get_nodi()[i])

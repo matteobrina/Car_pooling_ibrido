@@ -7,7 +7,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 figura2.png
-
+figura3.png
+figura4.png
+test.py
+figura.png
 # C extensions
 *.so
 

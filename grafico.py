@@ -1,7 +1,7 @@
 import cheapest_insertion as ci
 import matplotlib.pyplot as plt
 
-def grafico(lista_nodi, lista_fermate, cluster, nomefile):
+def grafico(lista_nodi, lista_fermate, lista_route, nomefile):
 
     plt.figure(figsize=(30, 30))
     plt.grid()
@@ -16,9 +16,9 @@ def grafico(lista_nodi, lista_fermate, cluster, nomefile):
 
 
 
-    for el in cluster.get_cluster_set():
-        route=ci.routing(el)
-        lista=route.get_nodi()
+    for el in lista_route:
+        
+        lista=el.get_nodi()
         lista_x=[]
         lista_y=[]
         lista_i=[]
