@@ -1,4 +1,3 @@
-import cheapest_insertion as ci
 import matplotlib.pyplot as plt
 
 def grafico(lista_nodi, lista_fermate, lista_route, nomefile):

@@ -1,6 +1,5 @@
 from operator import attrgetter
 import cluster as cl
-import nodo as nd
 import utili as ut
 import copy
 class Cluster_set:

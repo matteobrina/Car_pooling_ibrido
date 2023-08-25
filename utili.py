@@ -1,4 +1,3 @@
-import nodo
 import math
 import route as rt
 
