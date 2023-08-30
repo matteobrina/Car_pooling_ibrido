@@ -8,7 +8,10 @@ clone the repository
 move in the folder just created
 ```cd Car_pooling_ibrido```
 
-create a python virtuale environment
+if you haven't installed yet, install python venv
+```sudo apt install python3.10-venv```
+
+create a python virtual environment
 ```python3 -m venv env```
 
 activate the environment
